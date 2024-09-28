@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 10%;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(25, 107, 222);
+    z-index: 1;
+    width: 50%;
+}
+
+.titleHero {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: "Poppins";
+}
+
+.description {
+    font-size: 25px;
+    margin-bottom: 52px;
+    font-family: "Poppins";
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%; 
+    z-index: 1;
+}
+
+.buttonHero {
+    text-decoration: none;
+    background-color: rgb(25, 107, 222);
+    color: aliceblue;
+    border-radius: 30px;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 550;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    flex-grow: 1;
+}
+
+.buttonHero:hover {
+    background-color: rgb(102, 179, 232);
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.buttonHero:active {
+    transform: translateY(1px);
+}
+
+.heroImg {
+    width: 40%; 
+    margin-right: 5%;
+    border-radius: 200px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.socialButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        margin: 40px 5%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .heroImg {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .titleHero {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .buttonHero {
+        font-size: 16px;
+        padding: 12px;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .social-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .buttonHero {
+        width: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-container {
+        margin: 100px 10%;
+    }
+
+    .titleHero {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 30px;
+    }
+}

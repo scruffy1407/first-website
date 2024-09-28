@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 80px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+    min-width: 300px;
+}
+
+.about-title {
+    font-size: 35px;
+    margin-bottom: 50px;
+    color: rgb(25, 107, 222);
+    font-family: "Poppins";
+}
+
+.languages-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.language-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+    font-family: "Poppins";
+    color: #000000b1;
+}
+
+.language-card:hover {
+    transform: scale(1.1);
+}
+
+.language-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.language-card:hover .language-logo {
+    transform: scale(1.1);
+}
+
+.language-card span {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .languages-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .language-card span {
+        font-size: 16px;
+    }
+
+    .right-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 28px;
+    }
+
+    .language-card span {
+        font-size: 15px;
+    }
+
+    .language-logo {
+        width: 60px;
+        height: 60px;
+    }
+}

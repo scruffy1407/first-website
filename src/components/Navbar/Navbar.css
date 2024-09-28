@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 115, 255, 0.26);
+    box-sizing: border-box;
+}
+
+.titleNavbar {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    color: #0E3E81;
+    font-family: "Poppins";
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.navbar-links a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0E3E81;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: rgb(25, 107, 222);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #0E3E81;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    height: calc(100vh - 78px);
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleNavbar {
+        font-size: 20px;
+    }
+
+    .navbar-links a {
+        font-size: 18px;
+    }
+
+    .line {
+        width: 25px;
+    }
+    
+    .open {
+        top: 70px;
+    }
+}
