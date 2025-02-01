@@ -12,7 +12,7 @@ function Hero() {
                 </p>
                 <div className="buttonContainer">
                     <button className="buttonHero" onClick={() => window.location.href = "#projects"}>My Projects</button>
-                    <button className="buttonHero" onClick={() => window.open("https://drive.google.com", "_blank")}>
+                    <button className="buttonHero" onClick={() => window.open("https://drive.google.com/file/d/16y5zDcvAURXfIOU77U-fbSsnedDoLaYE/view?usp=drivesdk", "_blank")}>
                         Download CV
                     </button>
                 </div>

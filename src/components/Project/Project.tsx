@@ -1,40 +1,55 @@
 import Projectcard, { CardProps } from "../Card/project-card/Projectcard";
 import "./Project.css";
 
-const data = [
+const data: CardProps[] = [
     {
-        image: "https://img.freepik.com/free-vector/colleagues-discussing-accounting-statistics-report-using-software_74855-5315.jpg?t=st=1727017839~exp=1727021439~hmac=52a56369cdf54a3335321ac9c1bb6061728b837ec6ea0465e9460ff449f1c678&w=1800",
-        title: "Media Creative - Social Media Agency",
-        description: "MediaKreatif is your go-to social media agency, dedicated to helping brands amplify their online presence. We specialize in crafting engaging content, managing your social platforms, and running targeted campaigns that resonate with your audience."
+        image: "./projects/Pathway Preview.webp",
+        logo: "./logos/Pathway.svg",
+        title: "Pathway - Online Job Board Website",
+        description: "A scalable job board platform with real-time job postings, advanced filtering, role-based access, secure authentication, payment integration, and analytics.",
+        link: "https://pathway-job.vercel.app",
     },
     {
-        image: "https://img.freepik.com/free-vector/scientific-research-landing-page-template_23-2150210618.jpg?t=st=1727017962~exp=1727021562~hmac=5505bf74b7971d86c1f20cef21f187607e77702ded3d836175be8324a1419ab2&w=1800",
-        title: "PasarOnline - E-Commerce Store",
-        description: "PasarOnline is an innovative e-commerce platform that connects buyers and sellers seamlessly. Our user-friendly interface and diverse product offerings make shopping a delightful experience.",
+        image: "./projects/FRUGMART Preview.webp",
+        logo: "./logos/FRUGMART.svg",
+        title: "FRUGMART - E-Commerce Platform",
+        description: "A modern e-commerce platform featuring a seamless shopping experience, secure payments, PostgreSQL-backed inventory management, and real-time order tracking.",
+        link: "https://frugmart.shop",
     },
     {
-        image: "https://img.freepik.com/premium-vector/professional-services-sector-economy-web-template-landing-page-human-resourses-employment-idea-recruitment-job-management-headhunter-select-worker-vector-illustration_277904-10656.jpg?w=1800",
-        title: "DanaDigital - Financial Platform",
-        description: "DanaDigital is a financial platform designed to empower users with smart investment and budgeting tools. We provide real-time analytics, personalized insights, and secure transactions, making finance accessible and straightforward for everyone.",
+        image: "./projects/Seatly Preview.webp",
+        logo: "./logos/Seatly.svg",
+        title: "Seatly - Reservation Booking Website",
+        description: "A real-time seat reservation system with an intuitive UI, PostgreSQL-based data management, email notifications, and CI/CD deployment on Vercel.",
+        link: "https://seatly.vercel.app",
     },
+    {
+        image: "./projects/MoneyTree Preview.webp",
+        logo: "./logos/MoneyTree.svg",
+        title: "MoneyTree - Budget Management Platform",
+        description: "A personal finance tracking app allowing users to manage expenses, visualize spending trends, and interact with dynamic financial insights.",
+        link: "https://moneytree.vercel.app",
+    }
 ];
 
 function Project() {
     return (
         <section id="projects" className="outer-container">
             <h1 className="project-title">Previous <u>Projects</u></h1>
-            <div className="card-container"> 
-                {data.map((card: CardProps) => (
+            <div className="card-container">
+                {data.map((card) => (
                     <Projectcard
                         key={card.title}
                         image={card.image}
+                        logo={card.logo}
                         title={card.title}
                         description={card.description}
+                        link={card.link}
                     />
                 ))}
             </div>
         </section>
-    )
+    );
 }
 
 export default Project;
